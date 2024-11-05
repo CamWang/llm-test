@@ -1,0 +1,76 @@
+{
+  "$": "au.com.westpac.ddep.metadata.v2.Dataset",
+  "name": "fdp027_loan_application",
+  "namespace": "au.com.westpac.ddep.loan.application",
+  "doc": "Loan application master data",
+  "fields": [
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.VARCHAR",
+        "length": 30,
+        "type": "string"
+      },
+      "name": "application_id",
+      "doc": "Unique loan application identifier",
+      "primaryKey": true
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.VARCHAR",
+        "length": 30,
+        "type": "string"
+      },
+      "name": "customer_id",
+      "doc": "Customer identifier"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.DECIMAL",
+        "precision": 15,
+        "scale": 2,
+        "type": "decimal"
+      },
+      "name": "loan_amount",
+      "doc": "Requested loan amount"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.VARCHAR",
+        "length": 20,
+        "type": "string"
+      },
+      "name": "loan_purpose",
+      "doc": "Purpose of loan"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": "int",
+      "name": "loan_term_months",
+      "doc": "Loan term in months"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.Date",
+        "logicalType": "date",
+        "type": "date"
+      },
+      "name": "application_date",
+      "doc": "Application submission date"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.VARCHAR",
+        "length": 20,
+        "type": "string"
+      },
+      "name": "status",
+      "doc": "Application status"
+    }
+  ]
+}

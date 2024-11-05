@@ -1,0 +1,83 @@
+{
+  "$": "au.com.westpac.ddep.metadata.v2.Dataset",
+  "name": "fdp027_assets_liabilities",
+  "namespace": "au.com.westpac.ddep.loan.application",
+  "doc": "Applicant assets and liabilities information",
+  "fields": [
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.VARCHAR",
+        "length": 30,
+        "type": "string"
+      },
+      "name": "application_id",
+      "doc": "Loan application identifier",
+      "primaryKey": true
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.DECIMAL",
+        "precision": 15,
+        "scale": 2,
+        "type": "decimal"
+      },
+      "name": "property_value",
+      "doc": "Total property assets value"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.DECIMAL",
+        "precision": 15,
+        "scale": 2,
+        "type": "decimal"
+      },
+      "name": "vehicle_value",
+      "doc": "Total vehicle assets value"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.DECIMAL",
+        "precision": 15,
+        "scale": 2,
+        "type": "decimal"
+      },
+      "name": "savings_balance",
+      "doc": "Total savings balance"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.DECIMAL",
+        "precision": 15,
+        "scale": 2,
+        "type": "decimal"
+      },
+      "name": "mortgage_balance",
+      "doc": "Outstanding mortgage balance"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.DECIMAL",
+        "precision": 15,
+        "scale": 2,
+        "type": "decimal"
+      },
+      "name": "monthly_expenses",
+      "doc": "Total monthly expenses"
+    },
+    {
+      "$": "au.com.westpac.ddep.metadata.v2.Field",
+      "type": {
+        "$": "au.com.westpac.ddep.metadata.v2.data-type.INTEGER",
+        "type": "int"
+      },
+      "name": "asset_risk_score",
+      "doc": "Risk score based on assets and liabilities assessment"
+    }
+  ]
+}
