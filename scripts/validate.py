@@ -41,10 +41,10 @@ def validate_data_integrity(application_df, income_df, credit_df, assets_df, log
     """
     try:
         # Validate each table
-        valid_apps = validate_required_fields(application_df, 'loan_application', logger)
-        valid_income = validate_required_fields(income_df, 'income_employment', logger)
-        valid_credit = validate_required_fields(credit_df, 'credit_history', logger)
-        valid_assets = validate_required_fields(assets_df, 'assets_liabilities', logger)
+        valid_apps = validate_required_fields(application_df, 'loan_application_frame', logger)
+        valid_income = validate_required_fields(income_df, 'income_employment_frame', logger)
+        valid_credit = validate_required_fields(credit_df, 'credit_history_frame', logger)
+        valid_assets = validate_required_fields(assets_df, 'assets_liabilities_frame', logger)
 
         # Join validation
         valid_data = valid_apps.join(

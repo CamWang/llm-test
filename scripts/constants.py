@@ -42,10 +42,10 @@ STATUS_REVIEW_REQUIRED = "REVIEW_REQUIRED"
 
 # Required fields for validation
 REQUIRED_FIELDS = {
-    'fdp027_loan_application': ['application_id', 'customer_id', 'loan_amount', 'loan_term_months'],
-    'fdp027_income_employment': ['annual_income', 'employment_status', 'years_employed'],
-    'fdp027_credit_history': ['credit_score', 'total_existing_debt'],
-    'fdp027_assets_liabilities': ['monthly_expenses', 'savings_balance']
+    'loan_application_frame': ['application_id', 'customer_id', 'loan_amount', 'loan_term_months'],
+    'income_employment_frame': ['annual_income', 'employment_status', 'years_employed'],
+    'credit_history_frame': ['credit_score', 'total_existing_debt'],
+    'assets_liabilities_frame': ['monthly_expenses', 'savings_balance']
 }
 
 # Database configuration

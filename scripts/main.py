@@ -58,18 +58,19 @@ def main():
 
         # Load input data
         dataframes = {
-            "fdp027_loan_application": spark.read("fdp027_loan_application"),
-            "fdp027_income_employment": spark.read(
-                "fdp027_income_employment"
+            "loan_application_frame": spark.read(
+                "loan_application"),
+            "income_employment_frame": spark.read(
+                "income_employment"
             ),
-            "fdp027_credit_history": spark.read(
-                "fdp027_credit_history"
+            "credit_history_frame": spark.read(
+                "credit_history"
             ),
-            "fdp027_assets_liabilities": spark.read(
-                "fdp027_assets_liabilities"
+            "assets_liabilities_frame": spark.read(
+                "assets_liabilities"
             ),
-            "fdp027_loan_history": spark.read(
-                "fdp027_loan_history"
+            "loan_history_frame": spark.read(
+                "loan_history"
             )
         }
         logger.info("Data loaded successfully")
@@ -88,6 +89,14 @@ def main():
         # Show results
         logger.info("Approved loans summary:")
         results.show()
+        if ENV_LOCAL == "local":
+            output_path = "path/output/local_loan_results"
+            results.write.mode("overwrite").option("header", "true").parquet(output_path)
+            logger.info("Results saved to approved_loans directory")
+        else:
+            cloud_path = "s3://your-bucket/loan_results"
+            results.write.mode("overwrite").option("header", "true").parquet(cloud_path)
+            logger.info(f"Results saved to cloud: {cloud_path}")
 
         # Get some statistics
         total_approved = results.count()

@@ -19,11 +19,11 @@ def process_loan_applications(framework_context, atlas, config, logger, session,
         logger.info("Starting loan application processing")
 
         # Get input dataframes
-        application_df = dataframes["fdp027_loan_application"]
-        income_df = dataframes["fdp027_income_employment"]
-        credit_df = dataframes["fdp027_credit_history"]
-        assets_df = dataframes["fdp027_assets_liabilities"]
-        loan_history_df = dataframes["fdp027_loan_history"]
+        application_df = dataframes["loan_application_frame"]
+        income_df = dataframes["income_employment_frame"]
+        credit_df = dataframes["credit_history_frame"]
+        assets_df = dataframes["assets_liabilities_frame"]
+        loan_history_df = dataframes["loan_history_frame"]
 
         # Data validation
         valid_data = validate_data_integrity(
